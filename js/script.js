@@ -45,7 +45,15 @@ $(document).ready(function () {
     // })
 
 
+    //채용 FAQ
+    $('.recruit-wrap .btn-answer-view').click(function () {
+        $('.recruit-wrap li').slideDown('active')
+    })
+
+
+
 })
+
 
 
 
@@ -107,6 +115,7 @@ var swiper = new Swiper(".sec01 .swiper", {
     navigation: {
         nextEl: ".sec01 .swiper-button-next",
         prevEl: ".sec01 .swiper-button-prev",
+
     },
 });
 

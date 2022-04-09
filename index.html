@@ -7,14 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/common.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <header>
-        <div class="header-inner">
+        <div class="container">
             <h1>
                 <a href="" class="pc-logo">
                     <img src="./images/logo.png" alt="">
@@ -391,7 +390,9 @@
                 <div class="news-area">
                     <div class="top-area">
                         <h2 class="tit">NEWS</h2>
-                        <a href="">MORE</a>
+                        <a href="">
+                            <span>MORE</span>
+                        </a>
                     </div>
                     <div class="con-group">
                         <a href="">
@@ -409,8 +410,11 @@
                         </a>
                         <a href="">
                             <img src="./images/sns.png" alt="">
-                            <h3>[풍림무약] 2022년 청년친화강가나다라마바사</h3>
-                            <p>풍림무약이 고용노동부가 선정하는<br class="pc">'2022년 청년친화 강소기업'에 선정되었습니다. 가나다라마바사</p>
+                            <h3>[풍림무약] 가나안근로복지관에 설맞이 떡국떡 세트 기부 전달</h3>
+                            <p>풍림무약은 성남시 소재 가나안근로복지관에 설 명절을 맞아 떡국떡 세트(200만원 상당)를 기부했습니다!전달식은 풍림무약 본사에서 진행되었습니다.​ ✔️일시 :
+                                1월 18일(화) 오후 3시 ✔️장소 : 풍림무약 본사 대회의실 ​ 이번 전달식에는 풍림무약 제약사업본부장 이찬규 상무와 가나안근로복지관의 이혜정 관장이
+                                함께해 주셨습니다. 풍림무약은 2018년부터 꾸준하게 가나안근로복지관에 건강식품 ‘썬민 아미노썬 3650’ 등을 후원하는 등 장애인 직업재활 및 일자리 확대를
+                                위한 중증장애인생산품 소비 활성화에도 앞장서고 […]</p>
                             <div class="date">2022. 01. 20</div>
                         </a>
                     </div>
@@ -426,77 +430,6 @@
                 </div>
             </div>
         </section>
-        <!-- 문의영역-->
-        <form class="qna-area">
-            <div class="container">
-                <h2 class="tit">풍림무약에<br class="pc">궁금하신 점을 알려주세요</h2>
-                <div class="con-area">
-                    <div class="txt-wrap">
-                        <div class="name-area">
-                            <label for="name">성명</label>
-                            <input type="text" id="name" placeholder="성명을 입력하세요">
-                        </div>
-                        <div class="contact-area">
-                            <label for="contact">연락처</label>
-                            <input type="text" id="contact" placeholder="연락처를 입력하세요">
-                        </div>
-                    </div>
-                    <div class="txt-wrap">
-                        <div class="email-area">
-                            <label for="email">이메일</label>
-                            <input type="text" id="email" placeholder="이메일을 입력하세요">
-                        </div>
-                    </div>
-                    <div class="txt-wrap">
-                        <div class="business-select-area">
-                            <label for="part" class="tit">분류</label>
-                            <ul class="part-group">
-                                <li>
-                                    <input type="radio" id="company" name="business">
-                                    <label for="company">기업문의</label>
-                                </li>
-                                <li>
-                                    <input type="radio" id="trading" name="business">
-                                    <label for="trading">무역사업</label>
-                                </li>
-                                <li>
-                                    <input type="radio" id="pharmacy" name="business">
-                                    <label for="pharmacy">제약사업</label>
-                                </li>
-                                <li>
-                                    <input type="radio" id="other" name="business">
-                                    <label for="other">기타문의</label>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="txt-wrap">
-                        <div class="product-qna-area">
-                            <label for="product-qna">문의제품</label>
-                            <input type="text" id="product-qna" placeholder="문의하실 제품명을 입력해주세요">
-                        </div>
-                    </div>
-                    <div class="txt-wrap">
-                        <div class="qna-con-area">
-                            <label for="qna-con">문의내용</label>
-                            <textarea type="text" id="qna-con" placeholder="문의하실 내용을 입력해주세요"></textarea>
-                            <div class="txt-wrap">
-                                <div class="privacy-area">
-                                    <label for="privacy">
-                                        <input type="checkbox" id="privacy">
-                                        <span>
-                                            <a href="">개인정보 수집 및 이용</a>에 동의합니다.
-                                        </span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="btn-wrap">
-                    <button class="inquiry-btn">문의하기</button>
-                </div>
-        </form>
 
     </main>
     <footer>
@@ -543,10 +476,22 @@
             </div>
         </div>
     </footer>
+    <!--홈페이지 팝업 -->
+    <div class="popup-area-bg"></div>
+    <div class="popup-area">
+        <div class="img-box">
+            <div class="btn-box">
+                <a href="">오늘 하루 보지 않음</a>
+                <a href="" class="no"></a>
+            </div>
+        </div>
+    </div>
     <!-- Swiper js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/swiper.js"></script>
     <script src="./js/script.js"></script>
+
 
 
 </body>
