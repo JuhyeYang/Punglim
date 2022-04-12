@@ -1,24 +1,80 @@
-.recruit-wrap { padding-top: 130px; } 
-
-.recruit-wrap h2 { padding: 140px 0 100px;
+.recruit-wrap {
+    padding-top: 130px;
 }
 
-.recruit-wrap ul { padding-top: 130px; padding-bottom: 200px; } 
+.recruit-wrap h2 {
+    padding: 140px 0 100px;
+}
+
+.recruit-wrap ul {
+    padding-top: 130px;
+    padding-bottom: 200px;
+}
 
 /* 리스트 스크롤 다운 업 효과넣기? */
-.recruit-wrap li { display: flex; padding: 40px 50px 40px 0; border-bottom: 1px solid #ddd;}
+.recruit-wrap li {
+    border-bottom: 1px solid #ddd;
+}
 
+.recruit-wrap li .q-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+}
 
-.recruit-wrap li div { display: flex; width: 100%; } 
+.recruit-wrap li .q-box .left {
+    display: flex;
+    width: calc(100% - 50px);
+}
 
-.recruit-wrap li span { width: 6%; text-align: center; font-size: 16px; font-weight: 500; line-height: 1.6; letter-spacing: -0.03em; color: #bbb; vertical-align: middle; } 
+.recruit-wrap li .q-box .left span {
+    width: 6%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: -0.03em;
+    color: #bbb;
+    vertical-align: middle;
+}
 
-.recruit-wrap li h3 { font-size: 28px; font-weight: 500; line-height: 1.1; letter-spacing: -0.03em; } 
+.recruit-wrap li .q-box .left h3 {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+}
 
 /* 스크롤 업다운시 버튼 회전 효과? */
-.recruit-wrap li .btn-answer-view { width: 30px; height: 30px; background: url(../images/icon-main-more.png)no-repeat center / 100% auto; transform: rotate(-90deg); cursor: pointer; } 
-
-.recruit-wrap li.active { width: 100%; display: none; padding: 45px 250px 45px -webkit-calc(6% + 7px); border-top: 1px solid #000;}
-
-.recruit-wrap li.active p { word-break: break-all; font-size: 18px; line-height: 1.8; letter-spacing: -0.03px;
+.recruit-wrap li .q-box .btn-answer-view {
+    width: 30px;
+    height: 30px;
+    background: url(../images/icon-main-more.png) no-repeat center / 100% auto;
+    transform: rotate(90deg);
+    cursor: pointer;
+    transition: 0.2s;
 }
+
+.recruit-wrap li .a-box {
+    display: none;
+    padding: 40px 130px 40px 86px;
+    border-top: 1px solid #000;
+}
+
+.recruit-wrap li .a-box p {
+    word-break: break-all;
+    font-size: 18px;
+    line-height: 1.8;
+    letter-spacing: -0.03px;
+}
+
+.recruit-wrap li.active .btn-answer-view {
+    transform: rotate(-90deg);
+}
+
+/* .recruit-wrap li.active {
+    width: 100%;
+    padding: 45px 250px 45px -webkit-calc(6% + 7px);
+    border-top: 1px solid #000;
+} */

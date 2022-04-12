@@ -2,18 +2,6 @@
 
 $(document).ready(function () {
 
-    //sec02 마우스 클릭시 창바뀜
-    $('main .sec02 .txt-box .pharmacy').click(function () {
-        $('main .sec02').addClass('pharmacy-click')
-        $('main .sec02').removeClass('trading-click')
-
-    })
-    $('main .sec02 .txt-box .trading').click(function () {
-        $('main .sec02').addClass('trading-click')
-        $('main .sec02').removeClass('pharmacy-click')
-
-
-    })
 
     //헤더 메뉴 오버시 메뉴창
     $('header .main-menu.company').mouseover(function () {
@@ -45,87 +33,129 @@ $(document).ready(function () {
     // })
 
 
+
+
+
+    //메인 배너 화면 넘김 효과
+    var swiper = new Swiper(".main-banner .swiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        effect: 'fade',
+        speed: 1000,
+        loop: true,
+        autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".main-banner .swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".main-banner .swiper-button-next",
+            prevEl: ".main-banner .swiper-button-prev",
+        },
+    });
+
+
+    var swiper = new Swiper(".sec01 .swiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        effect: 'fade',
+        speed: 1000,
+        loop: true,
+        autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+        },
+
+        pagination: {
+            el: ".sec01 .swiper-pagination",
+            type: "fraction",
+        },
+        navigation: {
+            nextEl: ".sec01 .swiper-button-next",
+            prevEl: ".sec01 .swiper-button-prev",
+
+        },
+    });
+
+
+
+
+    //sec02 마우스 클릭시 창바뀜
+    $('main .sec02 .txt-box .pharmacy').click(function () {
+        $('main .sec02').addClass('pharmacy-click')
+        $('main .sec02').removeClass('trading-click')
+
+    })
+    $('main .sec02 .txt-box .trading').click(function () {
+        $('main .sec02').addClass('trading-click')
+        $('main .sec02').removeClass('pharmacy-click')
+
+
+    })
+
+
+    $('main .sec03 .menu-area .more-btn').click(function () {
+        if ($('main .sec03 .menu-area').hasClass('active') == true) {
+            $('main .sec03 .menu-area').removeClass('active');
+            $('main .sec03 .menu-area .menu-box').hide();
+
+        } else {
+            $('main .sec03 .menu-area').addClass('active');
+            $('main .sec03 .menu-area .menu-box').show();
+
+        }
+
+
+
+
+    })
+
+    //sec01 넘김 효과
+    // var menu = ['Slide 1', 'Slide 2', 'Slide 3']
+    // var mySwiper = new Swiper('.sec01 .swiper-container', {
+    //     // If we need pagination
+    //     pagination: {
+    //         el: '.sec01 .swiper-pagination',
+    //         clickable: true,
+    //         renderBullet: function (index, className) {
+    //             return '<span class="' + className + '">' + (menu[index]) + '</span>';
+    //         },
+    //     },
+
+    //     // Navigation arrows
+    //     navigation: {
+    //         nextEl: '.sec01 .swiper-button-next',
+    //         prevEl: '.sec01 .swiper-button-prev',
+    //     },
+    // })
+
+
     //채용 FAQ
     $('.recruit-wrap .btn-answer-view').click(function () {
-        $('.recruit-wrap li').slideDown('active')
+        if ($('.recruit-wrap li').hasClass('active') == true) {
+            $('.recruit-wrap li').removeClass('active');
+            $('.recruit-wrap li .a-box').slideUp();
+
+        } else {
+            $('.recruit-wrap li').addClass('active');
+            $('.recruit-wrap li .a-box').slideDown();
+
+        }
     })
 
 
 
+
+
+    // var swiper = new Swiper(".sec01 .swiper", {
+    //     navigation: {
+    //         nextEl: ".sec01 .swiper-button-next",
+    //         prevEl: ".sec01 .swiper-button-prev",
+    //     },
+    // });
+
+
 })
-
-
-
-
-//메인 배너 화면 넘김 효과
-var swiper = new Swiper(".main-banner .swiper", {
-    spaceBetween: 30,
-    centeredSlides: true,
-    effect: 'fade',
-    speed: 1000,
-    loop: true,
-    autoplay: {
-        delay: 1500,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: ".main-banner .swiper-pagination",
-        clickable: true,
-    },
-    navigation: {
-        nextEl: ".main-banner .swiper-button-next",
-        prevEl: ".main-banner .swiper-button-prev",
-    },
-});
-
-
-//sec01 넘김 효과
-// var menu = ['Slide 1', 'Slide 2', 'Slide 3']
-// var mySwiper = new Swiper('.sec01 .swiper-container', {
-//     // If we need pagination
-//     pagination: {
-//         el: '.sec01 .swiper-pagination',
-//         clickable: true,
-//         renderBullet: function (index, className) {
-//             return '<span class="' + className + '">' + (menu[index]) + '</span>';
-//         },
-//     },
-
-//     // Navigation arrows
-//     navigation: {
-//         nextEl: '.sec01 .swiper-button-next',
-//         prevEl: '.sec01 .swiper-button-prev',
-//     },
-// })
-var swiper = new Swiper(".sec01 .swiper", {
-    spaceBetween: 30,
-    centeredSlides: true,
-    effect: 'fade',
-    speed: 1000,
-    loop: true,
-    autoplay: {
-        delay: 1500,
-        disableOnInteraction: false,
-    },
-
-    pagination: {
-        el: ".sec01 .swiper-pagination",
-        type: "fraction",
-    },
-    navigation: {
-        nextEl: ".sec01 .swiper-button-next",
-        prevEl: ".sec01 .swiper-button-prev",
-
-    },
-});
-
-
-
-
-// var swiper = new Swiper(".sec01 .swiper", {
-//     navigation: {
-//         nextEl: ".sec01 .swiper-button-next",
-//         prevEl: ".sec01 .swiper-button-prev",
-//     },
-// });
-
