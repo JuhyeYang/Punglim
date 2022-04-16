@@ -277,6 +277,7 @@ header .menu-group li a span {
     line-height: 1;
     color: #000;
     letter-spacing: -0.03em;
+    display: block;
 }
 
 header .menu-group li {
@@ -367,7 +368,7 @@ footer .container {
     width: 1180px;
 }
 
-/* 문의영역 */
+/* 문의영역푸터*/
 footer .qna-bottom-area {
     display: none;
     background: #1a1a1a;
@@ -535,8 +536,8 @@ footer .right-area .info-area .copy {
 
 @media(max-width:768px) {
     header {
-        background: #000;
-        padding: 0 30px;
+        padding: 10px 25px;
+        background: none;
     }
 
     header .container {
@@ -546,7 +547,7 @@ footer .right-area .info-area .copy {
 
     header .m-logo {
         display: block;
-        width: 300px;
+        width: 200px;
         cursor: pointer;
     }
 
@@ -558,10 +559,10 @@ footer .right-area .info-area .copy {
 
     header .m-search-btn {
         display: block;
-        width: 40px;
-        height: 40px;
+        width: 25px;
+        height: 25px;
         background: url(../images/search-btn-white.png)no-repeat center / cover;
-        margin-right: 30px;
+        margin-right: 20px;
     }
 
     header .m-menu-btn {
@@ -569,18 +570,17 @@ footer .right-area .info-area .copy {
     }
 
     header .m-menu-btn span {
-        width: 40px;
-        height: 5px;
+        width: 25px;
+        height: 3px;
         background: #fff;
         display: block;
     }
 
     header .m-menu-btn span:first-child {
-        margin-bottom: 8px;
+        margin-bottom: 6px;
     }
 
 
-    header .pc-logo,
     header nav,
     header .search-btn,
     header .lang {
