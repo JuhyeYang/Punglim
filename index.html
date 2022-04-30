@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/style.css">
+
 </head>
 
 <body>
-    <header>
+    <header class="sub-header">
         <div class="container">
             <h1>
                 <a href="" class="pc-logo">
@@ -94,29 +95,35 @@
                     <button class="search-btn"></button>
                     <button class="m-search-btn"></button>
                     <button class="lang"></button>
-                    </button>
                     <div class="m-menu-btn">
                         <span class="m-menu-btn-line-01"></span>
                         <span class="m-menu-btn-line-02"></span>
+                        <span class="m-menu-btn-line-03"></span>
+                        <span class="m-menu-btn-line-04"></span>
                     </div>
+                    <!--모바일 메뉴버튼 클릭시 팝업 -->
+                     <div class="mob-menu-pop-wrap">
+                         <div class="container">
+                             <div class="pop-head">
+                                 <div class="txt-box">
+                                     <a href="">KR</a>
+                                     <a href="">EN</a>
+                                 </div>
+                             </div>
+                             <ul>
+                                 <li><a href="">회사소개</a></li>
+                                 <li><a href="">무역사업</a></li>
+                                 <li><a href="">제약사업</a></li>
+                                 <li><a href="">뉴스룸</a></li>
+                                 <li><a href="">채용</a></li>
+                                 <li><a href="">문의</a></li>
+                             </ul>
+                         </div>
+                     </div>
+
                 </div>
             </div>
         </div>
-        <!-- <div class="m-header">
-            <h1 class="m-logo">
-                <a href="">
-                    <img src="./images/m-logo-white.svg" alt="">
-                </a>
-            </h1>
-            <div class="btn-group">
-                <button class="m-search-btn"></button>
-                </button>
-                <div class="m-menu-btn">
-                    <span class="m-menu-btn-line-01"></span>
-                    <span class="m-menu-btn-line-02"></span>
-                </div>
-            </div>
-        </div> -->
     </header>
     <main class="main-wrap">
         <div class="main-banner">
@@ -146,22 +153,8 @@
                             <a href="" class="more">VIEW MORE</a>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="iframe-box">
-                            <iframe src="https://player.vimeo.com/video/644174707?background=1"
-                                frameborder="0"></iframe>
-                        </div>
-                    </div>
                 </div>
-                <div class="btn-group">
-                    <div class="swiper-button-next">
-                        <span>NEXT</span>
-                    </div>
-                    <div class="swiper-button-prev">
-                        <span>PREV</span>
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
+
             </div>
         </div>
         <section class="sec01">
@@ -489,14 +482,10 @@
             </div>
         </div>
     </div>
+
     <!-- Swiper js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="./js/swiper.js"></script>
     <script src="./js/script.js"></script>
-
-
-
 </body>
-
 </html>

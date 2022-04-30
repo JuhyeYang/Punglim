@@ -68,16 +68,6 @@ $(document).ready(function () {
             delay: 1500,
             disableOnInteraction: false,
         },
-
-        pagination: {
-            el: ".sec01 .swiper-pagination",
-            type: "fraction",
-        },
-        navigation: {
-            nextEl: ".sec01 .swiper-button-next",
-            prevEl: ".sec01 .swiper-button-prev",
-
-        },
     });
 
 
@@ -92,8 +82,6 @@ $(document).ready(function () {
     $('main .sec02 .txt-box .trading').click(function () {
         $('main .sec02').addClass('trading-click')
         $('main .sec02').removeClass('pharmacy-click')
-
-
     })
 
 
@@ -107,10 +95,6 @@ $(document).ready(function () {
             $('main .sec03 .menu-area .menu-box').show();
 
         }
-
-
-
-
     })
 
     //sec01 넘김 효과
@@ -134,17 +118,13 @@ $(document).ready(function () {
 
 
     //채용 FAQ
-    $('.recruit-wrap .btn-answer-view').click(function () {
-        if ($('.recruit-wrap li').hasClass('active') == true) {
-            $('.recruit-wrap li').removeClass('active');
-            $('.recruit-wrap li .a-box').slideUp();
-
-        } else {
-            $('.recruit-wrap li').addClass('active');
-            $('.recruit-wrap li .a-box').slideDown();
-
-        }
+    $('.recruit-wrap li').click(function () {
+        $('.recruit-wrap li').removeClass('active');
+        $('.recruit-wrap li .a-box').slideUp();
+        $(this).addClass('active');
+        $(this).children('.a-box').slideDown();
     })
+
 
 
 
@@ -156,6 +136,23 @@ $(document).ready(function () {
     //         prevEl: ".sec01 .swiper-button-prev",
     //     },
     // });
+
+
+    //모바일 메뉴 클릭시 팝업
+    $('header .m-menu-btn').click(function (ev) {
+        ev.preventDefault();
+        $(this).toggleClass('active');
+        $("header .m-logo").hide();
+        $("header .m-search-btn").hide();
+        $('.mob-menu-pop-wrap').show()
+
+
+    })
+
+    // $('.mob-menu-pop-wrap .close-btn').click(function () {
+    //     $('.mob-menu-pop-wrap').hide()
+    //     $('header').show()
+    // })
 
 
 })
