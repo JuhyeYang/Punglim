@@ -32,6 +32,16 @@ $(document).ready(function () {
     //     $(this).removeClass('active')
     // })
 
+    $('.popup-area .btn-box button').click(function() {
+        $('.popup-area').hide()
+        $('.popup-area-bg').hide()
+    })
+
+    $('.popup-area-bg').click(function() {
+        $('.popup-area').hide()
+        $('.popup-area-bg').hide()
+    })
+
 
 
 
@@ -71,8 +81,6 @@ $(document).ready(function () {
     });
 
 
-
-
     //sec02 마우스 클릭시 창바뀜
     $('main .sec02 .txt-box .pharmacy').click(function () {
         $('main .sec02').addClass('pharmacy-click')
@@ -97,62 +105,36 @@ $(document).ready(function () {
         }
     })
 
-    //sec01 넘김 효과
-    // var menu = ['Slide 1', 'Slide 2', 'Slide 3']
-    // var mySwiper = new Swiper('.sec01 .swiper-container', {
-    //     // If we need pagination
-    //     pagination: {
-    //         el: '.sec01 .swiper-pagination',
-    //         clickable: true,
-    //         renderBullet: function (index, className) {
-    //             return '<span class="' + className + '">' + (menu[index]) + '</span>';
-    //         },
-    //     },
-
-    //     // Navigation arrows
-    //     navigation: {
-    //         nextEl: '.sec01 .swiper-button-next',
-    //         prevEl: '.sec01 .swiper-button-prev',
-    //     },
-    // })
-
-
     //채용 FAQ
     $('.recruit-wrap li').click(function () {
-        $('.recruit-wrap li').removeClass('active');
-        $('.recruit-wrap li .a-box').slideUp();
-        $(this).addClass('active');
-        $(this).children('.a-box').slideDown();
+        if($(this).hasClass('active')) {
+            $('.recruit-wrap li').removeClass('active');
+            $(this).children('.a-box').slideUp();
+        }else {
+            $('.recruit-wrap li').removeClass('active');
+            $('.recruit-wrap li').children('.a-box').slideUp();
+            $(this).addClass('active');
+            $(this).children('.a-box').slideDown();
+        }   
     })
-
-
-
-
-
-
-    // var swiper = new Swiper(".sec01 .swiper", {
-    //     navigation: {
-    //         nextEl: ".sec01 .swiper-button-next",
-    //         prevEl: ".sec01 .swiper-button-prev",
-    //     },
-    // });
-
 
     //모바일 메뉴 클릭시 팝업
-    $('header .m-menu-btn').click(function (ev) {
-        ev.preventDefault();
-        $(this).toggleClass('active');
-        $("header .m-logo").hide();
-        $("header .m-search-btn").hide();
-        $('.mob-menu-pop-wrap').show()
+    $('header .m-menu-btn').click(function(){
+        if($('header .m-menu-btn').hasClass('active')){
+            $('.mob-menu-pop-wrap').hide()
+            $(this).removeClass('active');
+        }else {
+            $(this).addClass('active');
 
-
+            $('.mob-menu-pop-wrap').show()
+        }
     })
 
-    // $('.mob-menu-pop-wrap .close-btn').click(function () {
-    //     $('.mob-menu-pop-wrap').hide()
-    //     $('header').show()
-    // })
+
+
+
+
+
 
 
 })

@@ -17,52 +17,24 @@
 /* 스크롤 업다운시 버튼 회전 효과? */
 .recruit-wrap li .q-box .btn-answer-view { width: 30px; height: 30px; background: url(../images/icon-main-more.png) no-repeat center / 100% auto; transform: rotate(90deg); cursor: pointer; transition: 0.2s; } 
 .recruit-wrap li .a-box { display: none; padding: 40px 250px 40px 86px; border-top: 1px solid #000; } 
-.recruit-wrap li .a-box p { word-break: breakall; font-size: 20px; line-height: 1.8; letter-spacing: -0.03px; color: #666; } 
+.recruit-wrap li .a-box p { word-break: break-all; font-size: 20px; line-height: 1.8; letter-spacing: -0.03px; color: #666; } 
 .recruit-wrap li.active .btn-answer-view { transform: rotate(-90deg); } 
 
 /*===========================================================================
  반응형
 ============================================================================*/
 @media(max-width:1020px) {
-    /* 헤더 */
-    * { font-family: sans-serif; } 
-    /* header nav, header .search-btn, header .lang { display: none; } 
-    header { padding: 10px 25px; background:red } 
-    header .container { display: flex; justify-content: space-between; } 
-    header .pc-logo { display: none; } 
-    header .m-logo { display: block; width: 170px; cursor: pointer; } 
-    header .btn-group { display: flex; } 
-    header .m-search-btn { display: block; width: 20px; height: 20px; background: url(../images/search-btn-white.png)no-repeat center / cover; margin-right: 20px; } 
-    header .m-menu-btn { display: block; width: 21px; height: 13px; transition: .3s ease-in-out; position: relative; top: -1px; z-index: 200; } 
-    header .m-menu-btn span { width: 100%; height: 3px; background: #fff; display: block; position: absolute; transition: .2s;} */
-
-    /* 모바일 메뉴버튼 클릭 시 클로즈버튼으로 변경이벤 */
-    header .m-menu-btn.active span:first-child,
-    header .m-menu-btn.active span:last-child { opacity: 0; } 
-    header .m-menu-btn.active span:nth-child(2) { opacity: 1; transform: rotate(45deg); } 
-    header .m-menu-btn.active span:nth-child(3) { opacity: 1; transform: rotate(-45deg); } 
-    header .m-menu-btn span:first-child { top: 0; } 
-    header .m-menu-btn span:nth-child(2) { top: 6px; opacity: 0; } 
-    header .m-menu-btn span:nth-child(3) { top: 6px; opacity: 0;}
-    header .m-menu-btn span:last-child { bottom: 0; } 
-
-
-    /* 서브헤더 */
-    .sub-header { display: block; padding: 25px; background: #fff; border: 1px solid #000;} 
-    .sub-header .pc-logo { display: block; width: 250px; cursor: pointer; } 
-    .sub-header .m-logo { display: none; } 
-    .sub-header .search-btn { display: block; width: 20px; height: 20px; margin-top: -1px; right: 40px; } 
-    .sub-header .m-search-btn { display: none; } 
-    .sub-header .m-menu-btn span { background: #000; }
-     
+    .sub-header { display: block; } 
+   
     /* 메인 */
-    .recruit-wrap { padding: 130px 50px 0; } 
+    .recruit-wrap { padding: 74px 20px 0; } 
     .recruit-wrap .container { margin-bottom: 140px; max-width: 860px; } 
-    .recruit-wrap h2 { padding: 65px 0 60px; font-size: 60px; } 
+    .recruit-wrap h2 { padding: 51px 0 48px; font-size: 38px; } 
     .recruit-wrap ul { padding: 0; } 
-    .recruit-wrap li .q-box { padding: 30px 0; } 
-    .recruit-wrap li .q-box .left h3 { font-size: 28px; line-height: 1.3; color: #000; font-weight: 500; margin-left: 8px; word-break: keep-all; } 
-    .recruit-wrap li .q-box .left span { font-size: 22px; font-family: 'Montserrat'; } 
-    .recruit-wrap li .a-box { padding: 40px 220px 40px 60px; word-break: keep-all; } 
-    .recruit-wrap li .a-box p { font-size: 19px; line-height: 1.6; letter-spacing: -0.03px; } 
+    .recruit-wrap li .q-box { padding: 24px 0; } 
+    .recruit-wrap li .q-box .left h3 { font-size: 17px; line-height: 1.3; color: #000; font-weight: 500; margin-left: 8px; word-break: keep-all; } 
+    .recruit-wrap li .q-box .left span { font-size: 13px; font-family: 'Montserrat'; } 
+    .recruit-wrap li .q-box .btn-answer-view { width: 16px; }
+    .recruit-wrap li .a-box { padding: 23px 133px 23px 40px;  } 
+    .recruit-wrap li .a-box p { font-size: 12px; line-height: 1.6; letter-spacing: -.6px; } 
 }
